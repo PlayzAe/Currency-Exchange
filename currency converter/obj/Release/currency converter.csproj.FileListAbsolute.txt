@@ -1,0 +1,12 @@
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\bin\Release\currency converter.exe.config
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\bin\Release\currency converter.exe
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\bin\Release\currency converter.pdb
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.csproj.AssemblyReference.cache
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.Form1.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.Properties.Resources.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_resources.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_sendmoney.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.csproj.GenerateResource.cache
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.csproj.CoreCompileInputs.cache
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.exe
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.pdb
