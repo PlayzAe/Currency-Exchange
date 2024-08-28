@@ -30,6 +30,7 @@ namespace currency_converter
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,25 +41,25 @@ namespace currency_converter
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(223, 18);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 33);
+            this.button1.Size = new System.Drawing.Size(96, 29);
             this.button1.TabIndex = 8;
             this.button1.Text = "Send Money";
             this.button1.UseVisualStyleBackColor = false;
@@ -67,13 +68,14 @@ namespace currency_converter
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(361, 18);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 33);
+            this.button2.Size = new System.Drawing.Size(81, 29);
             this.button2.TabIndex = 9;
             this.button2.Text = "Resources";
             this.button2.UseVisualStyleBackColor = false;
@@ -82,13 +84,14 @@ namespace currency_converter
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(499, 19);
+            this.button3.Location = new System.Drawing.Point(483, 19);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 33);
+            this.button3.Size = new System.Drawing.Size(83, 29);
             this.button3.TabIndex = 10;
             this.button3.Text = "Tools";
             this.button3.UseVisualStyleBackColor = false;
@@ -96,29 +99,29 @@ namespace currency_converter
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(639, 18);
+            this.button4.Location = new System.Drawing.Point(603, 19);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 33);
+            this.button4.Size = new System.Drawing.Size(78, 29);
             this.button4.TabIndex = 11;
             this.button4.Text = "Help";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(785, 18);
+            this.button5.Location = new System.Drawing.Point(727, 19);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 33);
+            this.button5.Size = new System.Drawing.Size(69, 29);
             this.button5.TabIndex = 12;
             this.button5.Text = "Support";
             this.button5.UseVisualStyleBackColor = false;
@@ -126,13 +129,14 @@ namespace currency_converter
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button6.BackColor = System.Drawing.Color.White;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1003, 18);
+            this.button6.Location = new System.Drawing.Point(1015, 19);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 33);
+            this.button6.Size = new System.Drawing.Size(63, 29);
             this.button6.TabIndex = 13;
             this.button6.Text = "Sign in";
             this.button6.UseVisualStyleBackColor = false;
@@ -140,7 +144,6 @@ namespace currency_converter
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(70, 24);
             this.label1.Name = "label1";
@@ -151,21 +154,28 @@ namespace currency_converter
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
             this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(74, 258);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(633, 65);
+            this.textBox2.Size = new System.Drawing.Size(555, 65);
             this.textBox2.TabIndex = 16;
             this.textBox2.Text = "Check exchange rates, send money internationally, and free currency tools";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox1.Font = new System.Drawing.Font("Ebrima", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(74, 94);
             this.textBox1.Multiline = true;
@@ -177,6 +187,7 @@ namespace currency_converter
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::currency_converter.Properties.Resources.shooting_star;
             this.pictureBox2.Location = new System.Drawing.Point(297, 103);
@@ -186,39 +197,27 @@ namespace currency_converter
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::currency_converter.Properties.Resources.currency;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel1.Location = new System.Drawing.Point(-1, 503);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 524);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1218, 170);
+            this.panel1.Size = new System.Drawing.Size(1215, 147);
             this.panel1.TabIndex = 19;
             // 
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button7.BackColor = System.Drawing.Color.White;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(74, 352);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(166, 43);
+            this.button7.Size = new System.Drawing.Size(147, 37);
             this.button7.TabIndex = 20;
             this.button7.Text = "Get The App";
             this.button7.UseVisualStyleBackColor = false;
@@ -226,23 +225,36 @@ namespace currency_converter
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button8.AutoEllipsis = true;
+            this.button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(297, 361);
+            this.button8.Location = new System.Drawing.Point(274, 357);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(68, 29);
+            this.button8.Size = new System.Drawing.Size(68, 31);
             this.button8.TabIndex = 21;
             this.button8.Text = "More";
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::currency_converter.Properties.Resources.currency;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1215, 671);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -258,7 +270,9 @@ namespace currency_converter
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Currency Exchange";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -279,7 +293,6 @@ namespace currency_converter
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -293,6 +306,7 @@ namespace currency_converter
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

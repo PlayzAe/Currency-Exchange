@@ -10,3 +10,4 @@ C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency conv
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency converter.pdb
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_sendmoney.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_resources.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_tools.resources

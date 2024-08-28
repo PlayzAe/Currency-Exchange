@@ -38,7 +38,10 @@ namespace currency_converter
             button1.Click += ButtonSendMoney_Click;
 
             // Attach the click event handler to the "Resources" button
-            button2.Click += ButtonSendMoney_Click;
+            button2.Click += ButtonResources_Click;
+
+            // Attach the click event handler to the "Tools" button
+            button3.Click += ButtonTools_Click;
         }
 
         private void addUserControl(UserControl userControl)
@@ -111,7 +114,7 @@ namespace currency_converter
             // Change background color when clicked
             button.MouseDown += (sender, e) =>
             {
-                button.BackColor = Color.LightGray;
+                button.BackColor = Color.DarkGray;
                 button.Invalidate(); // Redraw the button
             };
 
@@ -165,6 +168,14 @@ namespace currency_converter
             addUserControl(uS_Resources);
         }
 
+        private void ButtonTools_Click(object sender, EventArgs e) 
+        { 
+         
+            US_tools usS_Tools = new US_tools();
+            addUserControl(usS_Tools);
+
+        }
+
         // Other event handlers
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -202,6 +213,11 @@ namespace currency_converter
         }
 
         private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

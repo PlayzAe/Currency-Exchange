@@ -66,6 +66,12 @@
     <Compile Include="UserControls\US_sendmoney.Designer.cs">
       <DependentUpon>US_sendmoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\US_tools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\US_tools.Designer.cs">
+      <DependentUpon>US_tools.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\US_sendmoney.resx">
       <DependentUpon>US_sendmoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\US_tools.resx">
+      <DependentUpon>US_tools.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
