@@ -17,6 +17,7 @@ namespace currency_converter.UserControls
             button1.Click += ButtonBack_Click;
         }
 
+
         private void CustomizeBackButton(Button button)
         {
             button.FlatStyle = FlatStyle.Flat;
@@ -32,8 +33,15 @@ namespace currency_converter.UserControls
 
         private void ButtonBack_Click(object sender, EventArgs e)
         {
-            // Go back to the original page (assuming Form1 or any other control)
-            this.Parent.Controls.Remove(this); // Remove the current UserControl
+            //show panel in Form1
+            if (this.Parent is Form1 form1)
+            {
+                form1.ShowPanel(true);
+            }
+
+
+            // Go back to the original page 
+            this.Parent.Controls.Remove(this); 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

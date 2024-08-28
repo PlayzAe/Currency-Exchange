@@ -4,8 +4,13 @@ C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency conv
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.csproj.AssemblyReference.cache
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.Form1.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.Properties.Resources.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_help.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_more.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_resources.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_sendmoney.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_signIn.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_support.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency_converter.UserControls.US_tools.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.csproj.GenerateResource.cache
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.csproj.CoreCompileInputs.cache
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Release\currency converter.exe

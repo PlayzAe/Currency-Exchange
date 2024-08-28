@@ -2,15 +2,22 @@
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace currency_converter
 {
     public partial class Form1 : Form
+
     {
         public Form1()
         {
+
             InitializeComponent();
+            InitializeFadeInTimer();
+
+           
 
             // Underlining the text in button6
             button6.Text = "Sign In";
@@ -42,6 +49,61 @@ namespace currency_converter
 
             // Attach the click event handler to the "Tools" button
             button3.Click += ButtonTools_Click;
+
+            // Attach the click event handler to the "Help" button
+            button4.Click += ButtonHelp_Click;
+
+            // Attach the click event handler to the "Support" button
+            button5.Click += ButtonSupport_Click;
+
+            // Attach the click event handler to the "More" button
+            button8.Click += ButtonMore_Click;
+
+            // Attach the click event handler to the "Sign In" button
+            button6.Click += ButtonSignIn_Click;
+        }
+
+        // Handling fade in animation
+        private Timer fadeInTimer;
+        private float opacityStep = 0.1f; //The step of opacity change
+
+        public void ShowPanel(bool show)
+        {
+            panel1.Visible = show;
+
+        }
+
+//---------------------------------------------------------------------------------------------------------------//
+  //----------------------------Handling Customization Of Buttons And Other Things-------------------------------//
+
+        private void InitializeFadeInTimer()
+        {
+            fadeInTimer = new Timer();
+            fadeInTimer.Interval = 1; //Milliseconds
+            fadeInTimer.Tick += FadeInTimer_Tick;
+
+        }
+
+        private void FadeInTimer_Tick(object sender, EventArgs e)
+        {
+            if (Opacity < 1.0)
+            {
+                Opacity += opacityStep;
+            }
+            else
+            {
+                Opacity = 1.0;
+                fadeInTimer.Stop();
+            }
+        }
+
+        private void ShowUserControlithFadeIn(UserControl userControl)
+        {
+            Controls.Add(userControl);
+            userControl.Dock = DockStyle.Fill;
+            userControl.BringToFront();
+            Opacity = 0; // Start with 0 opacity
+            fadeInTimer.Start();
         }
 
         private void addUserControl(UserControl userControl)
@@ -155,28 +217,108 @@ namespace currency_converter
             textBox.TabStop = false; // Prevent the TextBox from being selected
         }
 
+
+ //-----------------------------------------------------------------------------------------------------------------//
+    //-----------------------------------Handling Of Button Interations----------------------------------//
+    
+
+        //Handles Send Money Button//
         private void ButtonSendMoney_Click(object sender, EventArgs e)
         {
-            // Replace with the UserControl you want to display
+
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
             US_sendmoney UC = new US_sendmoney();
             addUserControl(UC);
         }
 
+
+        // Handles Resources Button
         private void ButtonResources_Click(object sender, EventArgs e)
         {
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
             US_resources uS_Resources = new US_resources();
             addUserControl(uS_Resources);
         }
 
+
+        //Handles Tools Button
         private void ButtonTools_Click(object sender, EventArgs e) 
-        { 
-         
+        {
+
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
             US_tools usS_Tools = new US_tools();
             addUserControl(usS_Tools);
 
         }
 
-        // Other event handlers
+
+        //Handles Help Button
+        private void ButtonHelp_Click(object sender, EventArgs e)
+        {
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
+            US_help usS_Help = new US_help();
+            addUserControl(usS_Help);
+        }
+
+
+        //Handles Support Button
+        private void ButtonSupport_Click(object sender, EventArgs e)
+        {
+
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
+            US_support usS_Support = new US_support();
+            addUserControl(usS_Support);
+        }
+
+
+        //Handles More Button
+        private void ButtonMore_Click(object sender, EventArgs e)
+        {
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
+            US_more usS_More = new US_more();       
+            addUserControl(usS_More);
+        }
+
+
+        //Handles Sign In Button
+        private void ButtonSignIn_Click(object sender, EventArgs e)
+        {
+            // Hide The Panel
+            ShowPanel(false);
+
+            // Button Function To Enter New Page
+            US_signIn uS_SignIn = new US_signIn();
+            addUserControl(uS_SignIn);
+
+            // Button function for a fade in into the page
+            ShowUserControlithFadeIn(uS_SignIn);
+        }
+
+
+      
+
+      
+//-----------------------------------------------------------------------------------------------------------------//
+
+        // Do not remove this part is important
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -218,6 +360,11 @@ namespace currency_converter
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -44,7 +44,7 @@
             this.button10tools.Size = new System.Drawing.Size(100, 64);
             this.button10tools.TabIndex = 21;
             this.button10tools.UseVisualStyleBackColor = false;
-            
+            this.button10tools.Click += new System.EventHandler(this.button10tools_Click);
             // 
             // textBox1
             // 
@@ -58,6 +58,7 @@
             this.textBox1.TabIndex = 20;
             this.textBox1.Text = "Tools";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // US_tools
             // 

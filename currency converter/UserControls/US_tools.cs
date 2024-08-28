@@ -36,7 +36,24 @@ namespace currency_converter.UserControls
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            //show panel in Form1
+            if (this.Parent is Form1 form1)
+            {
+                form1.ShowPanel(true);
+            }
+
+            // Go back to the original page 
             this.Parent.Controls.Remove(this);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10tools_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
