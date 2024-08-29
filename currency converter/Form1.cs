@@ -20,7 +20,7 @@ namespace currency_converter
            
 
             // Underlining the text in button6
-            button6.Text = "Sign In";
+            button6.Text = "Sign Up";
             button6.Font = new Font(button6.Font, FontStyle.Underline);
 
             // Customizing buttons
@@ -29,7 +29,7 @@ namespace currency_converter
             CustomizeButton(button3); // Tools
             CustomizeButton(button4); // Help
             CustomizeButton(button5); // Support
-            CustomizeButton(button6); // Sign in
+            CustomizeButton(button6); // Sign Up
             CustomizeButton(button8); // More
 
             // Customizing button7 (Get the App) separately
@@ -59,7 +59,7 @@ namespace currency_converter
             // Attach the click event handler to the "More" button
             button8.Click += ButtonMore_Click;
 
-            // Attach the click event handler to the "Sign In" button
+            // Attach the click event handler to the "Sign Up" button
             button6.Click += ButtonSignIn_Click;
         }
 
@@ -298,7 +298,7 @@ namespace currency_converter
         }
 
 
-        //Handles Sign In Button
+        //Handles Sign Up Button
         private void ButtonSignIn_Click(object sender, EventArgs e)
         {
             // Hide The Panel
@@ -365,6 +365,11 @@ namespace currency_converter
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

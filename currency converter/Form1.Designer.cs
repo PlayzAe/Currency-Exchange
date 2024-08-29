@@ -137,10 +137,11 @@ namespace currency_converter
             this.button6.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(1027, 19);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(63, 29);
+            this.button6.Size = new System.Drawing.Size(71, 29);
             this.button6.TabIndex = 13;
-            this.button6.Text = "Sign in";
+            this.button6.Text = "Sign Up";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
