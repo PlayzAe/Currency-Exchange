@@ -40,12 +40,12 @@
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label4Email = new System.Windows.Forms.Label();
             this.label1RegForm = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonForLogin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.textBoxEmail);
             this.panel1.Controls.Add(this.label4Email);
             this.panel1.Controls.Add(this.label1RegForm);
-            this.panel1.Location = new System.Drawing.Point(225, 106);
+            this.panel1.Location = new System.Drawing.Point(180, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 552);
             this.panel1.TabIndex = 35;
@@ -200,43 +200,43 @@
             this.label1RegForm.TabIndex = 0;
             this.label1RegForm.Text = "Login Form";
             // 
-            // pictureBox3
+            // buttonForLogin
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::currency_converter.Properties.Resources._2008073;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1320, 717);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
+            this.buttonForLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonForLogin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonForLogin.BackgroundImage = global::currency_converter.Properties.Resources.Return;
+            this.buttonForLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonForLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonForLogin.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonForLogin.Location = new System.Drawing.Point(163, 43);
+            this.buttonForLogin.Name = "buttonForLogin";
+            this.buttonForLogin.Size = new System.Drawing.Size(43, 32);
+            this.buttonForLogin.TabIndex = 37;
+            this.buttonForLogin.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::currency_converter.Properties.Resources.registration_form_2;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(163, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(850, 590);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonForLogin
+            // pictureBox3
             // 
-            this.buttonForLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonForLogin.BackColor = System.Drawing.Color.Transparent;
-            this.buttonForLogin.BackgroundImage = global::currency_converter.Properties.Resources.icons8_back_button_50;
-            this.buttonForLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonForLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonForLogin.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonForLogin.Location = new System.Drawing.Point(207, 77);
-            this.buttonForLogin.Name = "buttonForLogin";
-            this.buttonForLogin.Size = new System.Drawing.Size(43, 32);
-            this.buttonForLogin.TabIndex = 29;
-            this.buttonForLogin.UseVisualStyleBackColor = false;
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::currency_converter.Properties.Resources._2008078;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1226, 673);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
             // 
             // Login_Page
             // 
@@ -247,11 +247,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Name = "Login_Page";
-            this.Size = new System.Drawing.Size(1306, 717);
+            this.Size = new System.Drawing.Size(1226, 673);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

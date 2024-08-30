@@ -11,3 +11,8 @@ C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency conv
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_sendmoney.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_resources.resources
 C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_tools.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.Login_Page.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_help.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_more.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_signIn.resources
+C:\Users\Moses\Desktop\Coding\Projects\wpf test\currency converter\currency converter\obj\Debug\currency_converter.UserControls.US_support.resources

@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1GoingBackToHome = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1RegForm = new System.Windows.Forms.Label();
             this.label2FirstName = new System.Windows.Forms.Label();
             this.label3LastName = new System.Windows.Forms.Label();
@@ -49,49 +46,13 @@
             this.buttonSignIn = new System.Windows.Forms.Button();
             this.label1HasAnAccount = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.button1GoingBackToHome = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::currency_converter.Properties.Resources.registration_form_2;
-            this.pictureBox1.Location = new System.Drawing.Point(163, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(850, 590);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1GoingBackToHome
-            // 
-            this.button1GoingBackToHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1GoingBackToHome.BackColor = System.Drawing.Color.Transparent;
-            this.button1GoingBackToHome.BackgroundImage = global::currency_converter.Properties.Resources.icons8_back_button_50;
-            this.button1GoingBackToHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1GoingBackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1GoingBackToHome.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1GoingBackToHome.Location = new System.Drawing.Point(163, 43);
-            this.button1GoingBackToHome.Name = "button1GoingBackToHome";
-            this.button1GoingBackToHome.Size = new System.Drawing.Size(43, 32);
-            this.button1GoingBackToHome.TabIndex = 28;
-            this.button1GoingBackToHome.UseVisualStyleBackColor = false;
-            this.button1GoingBackToHome.Click += new System.EventHandler(this.button1GoingBackToHome_Click_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::currency_converter.Properties.Resources._2008073;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1225, 674);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
             // 
             // label1RegForm
             // 
@@ -104,6 +65,7 @@
             this.label1RegForm.Size = new System.Drawing.Size(290, 27);
             this.label1RegForm.TabIndex = 0;
             this.label1RegForm.Text = "REGISTRATION FORM";
+            this.label1RegForm.Click += new System.EventHandler(this.label1RegForm_Click);
             // 
             // label2FirstName
             // 
@@ -190,6 +152,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(16, 269);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(348, 32);
             this.textBoxPassword.TabIndex = 8;
             // 
@@ -212,6 +175,7 @@
             this.textBoxConfirmPass.Location = new System.Drawing.Point(16, 359);
             this.textBoxConfirmPass.Multiline = true;
             this.textBoxConfirmPass.Name = "textBoxConfirmPass";
+            this.textBoxConfirmPass.PasswordChar = '•';
             this.textBoxConfirmPass.Size = new System.Drawing.Size(348, 32);
             this.textBoxConfirmPass.TabIndex = 8;
             // 
@@ -227,6 +191,7 @@
             this.checkBoxShowPass.TabIndex = 10;
             this.checkBoxShowPass.Text = "Show Password";
             this.checkBoxShowPass.UseVisualStyleBackColor = true;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
             // checkBoxTandCs
             // 
@@ -240,6 +205,7 @@
             this.checkBoxTandCs.TabIndex = 11;
             this.checkBoxTandCs.Text = "I accept the Terms of Use and Privacy Policy";
             this.checkBoxTandCs.UseVisualStyleBackColor = true;
+            this.checkBoxTandCs.CheckedChanged += new System.EventHandler(this.checkBoxTandCs_CheckedChanged);
             // 
             // buttonRegister
             // 
@@ -255,10 +221,12 @@
             this.buttonRegister.TabIndex = 12;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.buttonSignIn);
             this.panel1.Controls.Add(this.label1HasAnAccount);
             this.panel1.Controls.Add(this.buttonClear);
@@ -321,6 +289,45 @@
             this.buttonClear.TabIndex = 13;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // button1GoingBackToHome
+            // 
+            this.button1GoingBackToHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1GoingBackToHome.BackColor = System.Drawing.Color.Transparent;
+            this.button1GoingBackToHome.BackgroundImage = global::currency_converter.Properties.Resources.Return1;
+            this.button1GoingBackToHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1GoingBackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1GoingBackToHome.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1GoingBackToHome.Location = new System.Drawing.Point(163, 43);
+            this.button1GoingBackToHome.Name = "button1GoingBackToHome";
+            this.button1GoingBackToHome.Size = new System.Drawing.Size(43, 32);
+            this.button1GoingBackToHome.TabIndex = 33;
+            this.button1GoingBackToHome.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::currency_converter.Properties.Resources.registration_form_2;
+            this.pictureBox1.Location = new System.Drawing.Point(163, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(850, 590);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::currency_converter.Properties.Resources._2008078;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1225, 674);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
             // 
             // US_signIn
             // 
@@ -333,18 +340,16 @@
             this.Controls.Add(this.pictureBox3);
             this.Name = "US_signIn";
             this.Size = new System.Drawing.Size(1225, 674);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1GoingBackToHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1RegForm;
@@ -365,5 +370,6 @@
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label label1HasAnAccount;
         private System.Windows.Forms.Button buttonSignIn;
+        private System.Windows.Forms.Button button1GoingBackToHome;
     }
 }

@@ -205,12 +205,12 @@ namespace currency_converter
             this.button7.BackColor = System.Drawing.Color.White;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(74, 352);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(147, 37);
+            this.button7.Size = new System.Drawing.Size(168, 37);
             this.button7.TabIndex = 20;
-            this.button7.Text = "Get The App";
+            this.button7.Text = "Get The App On Mobile";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -222,7 +222,7 @@ namespace currency_converter
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(274, 357);
+            this.button8.Location = new System.Drawing.Point(283, 355);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(68, 31);
             this.button8.TabIndex = 21;
