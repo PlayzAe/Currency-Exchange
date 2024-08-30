@@ -40,6 +40,7 @@ If you do not trust the .exe in my releases you can build the application yourse
 
 ## Dotnet Installation
 As of this time donet 8.0 is the most current version
+
 [![Dotnet](https://img.shields.io/badge/Dotnet%20Download-8A2BE2)](https://dotnet.microsoft.com/en-us/download)
 
 ```bash
@@ -58,7 +59,6 @@ Mind You This Is still in the works and far from complete
 https://github.com/PlayzAe/Currency-Exchange/releases/tag/Alpha-App
 
 
-## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://georges-portfolio-bac87a.webflow.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/icpplayz/)
 
