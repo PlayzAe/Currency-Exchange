@@ -34,9 +34,13 @@ I made some tweaks to improve how events are handled, buttons look, and how the 
 None yet ☠️
 
 
-## Installation
+# Installation
 
-Install the exchange currency app using a dotnet console
+If you do not trust the .exe in my releases you can build the application yourself using a dotnet console
+
+## Dotnet Installation
+As of this time donet 8.0 is the most current version
+[![Dotnet](https://img.shields.io/badge/Dotnet%20Download-8A2BE2)](https://dotnet.microsoft.com/en-us/download)
 
 ```bash
   dotnet clean
