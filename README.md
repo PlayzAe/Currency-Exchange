@@ -34,18 +34,22 @@ I made some tweaks to improve how events are handled, buttons look, and how the 
 None yet ☠️
 
 
-## Installation
+# Installation
 
-Install the exchange currency app using a dotnet console
+If you do not trust the .exe in my releases you can build the application yourself using a dotnet console
+
+## Dotnet Installation
+https://dotnet.microsoft.com/en-us/download
+As of this time donet 8.0 is the most current version
 
 ```bash
-  dotnet clean
-  donet build
+dotnet clean
+donet build
 ```
 
 Running The project Through The Console
 ```bash
-  dotnet run
+dotnet run
 ```
     
 ## Demo
@@ -54,7 +58,6 @@ Mind You This Is still in the works and far from complete
 https://github.com/PlayzAe/Currency-Exchange/releases/tag/Alpha-App
 
 
-## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://georges-portfolio-bac87a.webflow.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/icpplayz/)
 
