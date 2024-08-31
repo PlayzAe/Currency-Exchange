@@ -7,19 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace currency_converter.UserControls
 {
     public partial class Login_Page : UserControl
     {
-        public Login_Page()
+        private Form1 _parentForm; // Store a reference to Form1
+
+        public Login_Page(Form1 parentForm)
         {
             InitializeComponent();
 
+            _parentForm = parentForm; // Store the reference to Form1
             CustomizeBackButton(buttonForLogin);
 
             buttonForLogin.Click += Button1_Click;
         }
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void CustomizeBackButton(Button button)
         {
@@ -27,20 +35,99 @@ namespace currency_converter.UserControls
             button.BackColor = Color.Transparent;
             button.FlatAppearance.BorderSize = 0; // Remove the border
 
-            // Ensure the button size is appropriate for the image
             int buttonSize = 25;
             button.Size = new Size(buttonSize, buttonSize);
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Parent.Controls.Remove(this); 
+            this.Parent.Controls.Remove(this);
         }
 
-        private void label4Email_Click(object sender, EventArgs e)
+        private void buttonSignIn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
 
+                string login = "SELECT * FROM table_users WHERE Email= @Email AND Password= @Password";
+                cmd = new OleDbCommand(login, con);
+
+                cmd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
+                cmd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
+
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    // Create and show the dashboard form with the parent form reference
+                    dashboard dashboardForm = new dashboard();
+                    dashboardForm.Show();
+
+                    // Set Form1's opacity to 0
+                    if (_parentForm != null)
+                    {
+                        _parentForm.Opacity = 0;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Email Address or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxEmail.Text = "";
+                    textBoxPassword.Text = "";
+                    textBoxEmail.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxPassword.Text = "";
+            textBoxConfirmPass.Text = "";
+            textBoxEmail.Text = "";
+        }
+
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPass.Checked)
+            {
+                textBoxPassword.PasswordChar = '\0';
+                textBoxConfirmPass.PasswordChar = '\0';
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '•';
+                textBoxConfirmPass.PasswordChar = '•';
+            }
+        }
+
+        private void createaccount_Click(object sender, EventArgs e)
+        {
+            // Assuming this UserControl (Login_Page) is hosted inside Form1
+            Form1 parentForm = (Form1)this.FindForm(); // Get the parent Form1 instance
+
+            if (parentForm != null)
+            {
+                US_signIn signInControl = new US_signIn(parentForm);
+                parentForm.Controls.Clear(); // Clear existing controls on the parent form
+                parentForm.Controls.Add(signInControl); // Add the new US_signIn control
+                signInControl.Dock = DockStyle.Fill; // Make sure it fills the parent form
+            }
         }
     }
 }

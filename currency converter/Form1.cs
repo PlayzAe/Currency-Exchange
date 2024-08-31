@@ -305,11 +305,11 @@ namespace currency_converter
             ShowPanel(false);
 
             // Button Function To Enter New Page
-            US_signIn uS_SignIn = new US_signIn();
-            addUserControl(uS_SignIn);
+            US_signIn signInControl = new US_signIn(this);
+            addUserControl(signInControl);
 
             // Button function for a fade in into the page
-            ShowUserControlithFadeIn(uS_SignIn);
+            ShowUserControlithFadeIn(signInControl);
         }
 
 

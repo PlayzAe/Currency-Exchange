@@ -65,7 +65,6 @@
             this.label1RegForm.Size = new System.Drawing.Size(290, 27);
             this.label1RegForm.TabIndex = 0;
             this.label1RegForm.Text = "REGISTRATION FORM";
-            this.label1RegForm.Click += new System.EventHandler(this.label1RegForm_Click);
             // 
             // label2FirstName
             // 

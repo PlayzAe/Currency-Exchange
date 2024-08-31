@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
@@ -13,12 +8,13 @@ namespace currency_converter.UserControls
 {
     public partial class US_signIn : UserControl
     {
-        public US_signIn()
+        private Form1 _parentForm;
+
+        public US_signIn(Form1 parentForm)
         {
             InitializeComponent();
 
-
-
+            _parentForm = parentForm;
 
             // Customizing the back button
             CustomizeBackButton(button1GoingBackToHome);
@@ -26,7 +22,7 @@ namespace currency_converter.UserControls
             // Attach the click event handler to the "Sign In" button
             button1GoingBackToHome.Click += Button1GoingBackToHome_Click;
 
-            // If button is clicked go to Login Page
+            // If button is clicked, go to Login Page
             buttonSignIn.Click += ButtonSignIn_Click;
         }
 
@@ -34,36 +30,28 @@ namespace currency_converter.UserControls
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
-
         private void ButtonSignIn_Click(object sender, EventArgs e)
         {
-            Login_Page UC = new Login_Page();
-            addUserControl( UC );
+            // Pass the reference to Form1 when creating the Login_Page user control
+            Login_Page UC = new Login_Page(_parentForm);
+            addUserControl(UC);
         }
 
         private void Button1GoingBackToHome_Click(object sender, EventArgs e)
         {
-            //show panel in Form1
-            if (this.Parent is Form1 form1)
-            {
-                form1.ShowPanel(true);
-            }
+            // Show panel in Form1
+            _parentForm.ShowPanel(true);
 
-            // Back To Form1(Original Page)
+            // Back To Form1 (Original Page)
             this.Parent.Controls.Remove(this);
         }
 
         private void addUserControl(UserControl userControl)
         {
-            if (this.Parent is Form1 form1)
-            {
-                form1.Controls.Add(userControl);
-                userControl.Dock = DockStyle.Fill;
-                userControl.BringToFront();
-            }
+            _parentForm.Controls.Add(userControl);
+            userControl.Dock = DockStyle.Fill;
+            userControl.BringToFront();
         }
-
-     
 
         private void CustomizeBackButton(Button button)
         {
@@ -74,69 +62,77 @@ namespace currency_converter.UserControls
             // Ensure the button size is appropriate for the image
             int buttonSize = 25;
             button.Size = new Size(buttonSize, buttonSize);
-
         }
 
-        private void button1GoingBackToHome_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1RegForm_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Other event handlers...
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            if (textBoxFirstName.Text == "" || textBoxLastName.Text == "" || textBoxPassword.Text == "" || textBoxConfirmPass.Text == "" || textBoxEmail.Text == "")
+            // Check if the "Agree to Terms" checkbox is checked
+            if (!checkBoxTandCs.Checked)
+            {
+                MessageBox.Show("Please agree to the terms and services before proceeding.", "Registration Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Stop further execution if terms are not agreed
+            }
+
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(textBoxFirstName.Text) ||
+                string.IsNullOrWhiteSpace(textBoxLastName.Text) ||
+                string.IsNullOrWhiteSpace(textBoxPassword.Text) ||
+                string.IsNullOrWhiteSpace(textBoxConfirmPass.Text) ||
+                string.IsNullOrWhiteSpace(textBoxEmail.Text))
             {
                 MessageBox.Show("Please fill in all fields", "Registration Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Stop further execution if any field is empty
             }
-            else if (textBoxPassword.Text == textBoxConfirmPass.Text)
-            {
-                try
-                {
-                    con.Open();
-                    // Correctly format the SQL INSERT statement, using square brackets for field names
-                    string register = "INSERT INTO table_users ([FirstName], [LastName], [Email], [Password]) VALUES (?, ?, ?, ?)";
-                    using (OleDbCommand cmd = new OleDbCommand(register, con))
-                    {
-                        // Use parameters to avoid SQL injection and syntax errors
-                        cmd.Parameters.AddWithValue("@FirstName", textBoxFirstName.Text);
-                        cmd.Parameters.AddWithValue("@LastName", textBoxLastName.Text);
-                        cmd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
-                        cmd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
 
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Your account has been successfully created!", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Clear the text boxes after successful registration
-                    textBoxFirstName.Text = "";
-                    textBoxLastName.Text = "";
-                    textBoxPassword.Text = "";
-                    textBoxConfirmPass.Text = "";
-                    textBoxEmail.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
-            else
+            // Check if passwords match
+            if (textBoxPassword.Text != textBoxConfirmPass.Text)
             {
                 MessageBox.Show("Passwords do not match, please re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxPassword.Text = "";
                 textBoxConfirmPass.Text = "";
                 textBoxPassword.Focus();
+                return; // Stop further execution if passwords do not match
+            }
+
+            // All checks passed, proceed with registration
+            try
+            {
+                con.Open();
+
+                // SQL INSERT statement with parameters
+                string register = "INSERT INTO table_users ([FirstName], [LastName], [Email], [Password]) VALUES (?, ?, ?, ?)";
+                using (OleDbCommand cmd = new OleDbCommand(register, con))
+                {
+                    // Use parameters to avoid SQL injection and syntax errors
+                    cmd.Parameters.AddWithValue("@FirstName", textBoxFirstName.Text);
+                    cmd.Parameters.AddWithValue("@LastName", textBoxLastName.Text);
+                    cmd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
+                    cmd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Your account has been successfully created!", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Clear the text boxes after successful registration
+                textBoxFirstName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxPassword.Text = "";
+                textBoxConfirmPass.Text = "";
+                textBoxEmail.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
             }
         }
+
 
         private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
         {
@@ -152,11 +148,6 @@ namespace currency_converter.UserControls
             }
         }
 
-        private void checkBoxTandCs_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxFirstName.Text = "";
@@ -164,6 +155,13 @@ namespace currency_converter.UserControls
             textBoxConfirmPass.Text = "";
             textBoxEmail.Text = "";
             textBoxFirstName.Focus();
+        }
+
+        private void checkBoxTandCs_CheckedChanged(object sender, EventArgs e)
+        {
+          
+            
+
         }
     }
 }

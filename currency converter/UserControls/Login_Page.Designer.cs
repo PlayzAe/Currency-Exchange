@@ -43,6 +43,7 @@
             this.buttonForLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.createaccount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.createaccount);
             this.panel1.Controls.Add(this.buttonSignIn);
             this.panel1.Controls.Add(this.label1HasAnAccount);
             this.panel1.Controls.Add(this.buttonClear);
@@ -81,16 +83,17 @@
             this.buttonSignIn.TabIndex = 15;
             this.buttonSignIn.Text = "Sign In";
             this.buttonSignIn.UseVisualStyleBackColor = false;
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
             // 
             // label1HasAnAccount
             // 
             this.label1HasAnAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1HasAnAccount.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1HasAnAccount.Location = new System.Drawing.Point(102, 459);
+            this.label1HasAnAccount.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1HasAnAccount.Location = new System.Drawing.Point(111, 455);
             this.label1HasAnAccount.Name = "label1HasAnAccount";
-            this.label1HasAnAccount.Size = new System.Drawing.Size(181, 48);
+            this.label1HasAnAccount.Size = new System.Drawing.Size(177, 30);
             this.label1HasAnAccount.TabIndex = 14;
-            this.label1HasAnAccount.Text = "Do Not Have An Account ? Then Go Back And Make One";
+            this.label1HasAnAccount.Text = "Do Not Have An Account ?";
             this.label1HasAnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonClear
@@ -107,6 +110,7 @@
             this.buttonClear.TabIndex = 13;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // checkBoxShowPass
             // 
@@ -120,6 +124,7 @@
             this.checkBoxShowPass.TabIndex = 10;
             this.checkBoxShowPass.Text = "Show Password";
             this.checkBoxShowPass.UseVisualStyleBackColor = true;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
             // textBoxConfirmPass
             // 
@@ -129,6 +134,7 @@
             this.textBoxConfirmPass.Location = new System.Drawing.Point(15, 318);
             this.textBoxConfirmPass.Multiline = true;
             this.textBoxConfirmPass.Name = "textBoxConfirmPass";
+            this.textBoxConfirmPass.PasswordChar = '•';
             this.textBoxConfirmPass.Size = new System.Drawing.Size(348, 32);
             this.textBoxConfirmPass.TabIndex = 8;
             // 
@@ -151,6 +157,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(15, 228);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(348, 32);
             this.textBoxPassword.TabIndex = 8;
             // 
@@ -186,7 +193,7 @@
             this.label4Email.Size = new System.Drawing.Size(41, 16);
             this.label4Email.TabIndex = 5;
             this.label4Email.Text = "Email";
-            this.label4Email.Click += new System.EventHandler(this.label4Email_Click);
+            
             // 
             // label1RegForm
             // 
@@ -238,6 +245,19 @@
             this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
+            // createaccount
+            // 
+            this.createaccount.AutoSize = true;
+            this.createaccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.createaccount.Location = new System.Drawing.Point(133, 498);
+            this.createaccount.Name = "createaccount";
+            this.createaccount.Size = new System.Drawing.Size(112, 16);
+            this.createaccount.TabIndex = 16;
+            this.createaccount.Text = "Create Account";
+            this.createaccount.Click += new System.EventHandler(this.createaccount_Click);
+            // 
             // Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,5 +293,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonForLogin;
+        private System.Windows.Forms.Label createaccount;
     }
 }
