@@ -116,18 +116,11 @@ namespace currency_converter.UserControls
             }
         }
 
-        private void createaccount_Click(object sender, EventArgs e)
-        {
-            // Assuming this UserControl (Login_Page) is hosted inside Form1
-            Form1 parentForm = (Form1)this.FindForm(); // Get the parent Form1 instance
+        
 
-            if (parentForm != null)
-            {
-                US_signIn signInControl = new US_signIn(parentForm);
-                parentForm.Controls.Clear(); // Clear existing controls on the parent form
-                parentForm.Controls.Add(signInControl); // Add the new US_signIn control
-                signInControl.Dock = DockStyle.Fill; // Make sure it fills the parent form
-            }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

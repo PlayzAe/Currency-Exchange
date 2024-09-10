@@ -43,7 +43,7 @@
             this.buttonForLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.createaccount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,7 +52,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.createaccount);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonSignIn);
             this.panel1.Controls.Add(this.label1HasAnAccount);
             this.panel1.Controls.Add(this.buttonClear);
@@ -193,7 +193,6 @@
             this.label4Email.Size = new System.Drawing.Size(41, 16);
             this.label4Email.TabIndex = 5;
             this.label4Email.Text = "Email";
-            
             // 
             // label1RegForm
             // 
@@ -245,18 +244,17 @@
             this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
-            // createaccount
+            // label1
             // 
-            this.createaccount.AutoSize = true;
-            this.createaccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.createaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.createaccount.Location = new System.Drawing.Point(133, 498);
-            this.createaccount.Name = "createaccount";
-            this.createaccount.Size = new System.Drawing.Size(112, 16);
-            this.createaccount.TabIndex = 16;
-            this.createaccount.Text = "Create Account";
-            this.createaccount.Click += new System.EventHandler(this.createaccount_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 495);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 28);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Go Back and Create One";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Login_Page
             // 
@@ -293,6 +291,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonForLogin;
-        private System.Windows.Forms.Label createaccount;
+        private System.Windows.Forms.Label label1;
     }
 }

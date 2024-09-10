@@ -71,7 +71,7 @@ namespace currency_converter.UserControls
             // Check if the "Agree to Terms" checkbox is checked
             if (!checkBoxTandCs.Checked)
             {
-                MessageBox.Show("Please agree to the terms and services before proceeding.", "Registration Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please agree to the Terms of Use and Privacy Policy.", "Registration Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Stop further execution if terms are not agreed
             }
 
